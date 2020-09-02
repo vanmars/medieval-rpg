@@ -5,7 +5,7 @@
       // intelligence: 20
       // Roll Method: for special power, return is how much damage cause
 
-class Warrior {
+export default class Warrior {
   constructor(){
     this.strength = 100;
     this.healthPoints = 100;
@@ -16,7 +16,7 @@ class Warrior {
     return -2(Math.ceil(Math.random()*6))
   }
 
-  applyDamage(number) {
-    this.healthPoints -= number;
-  }
+//   applyDamage(number) {
+//     this.healthPoints -= number;
+//   }
 }
