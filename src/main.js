@@ -1,34 +1,11 @@
-// Planning
-// Use ES6 classes to generate different character types.
-  
-  // Player Class
-    // Player Type: Warrior or Mage
-    // Current Level
-    // Number of Objects (keep it at two objects)
-    // Methods for each level - adds points to an attribute
+import $ from 'jquery';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/styles.css';
+import Warrior from './warrior.js';
+import Mage from './mage.js';
+import Player from './player.js';
+import BattleSystem from './battleSystem.js'
 
-  // Warrior
-      // strength:100
-      // HP (health points): 100
-      // defense: 80
-      // intelligence: 20
-      // Roll Method: for special power, return is how much damage caused
 
-  // Mage
-      // strength:10
-      // HP (health points): 100
-      // defense: 50
-      // intelligence: 100
-      // Roll Method: for special power, return is how much damage caused
 
-  // Battle System Function (parameters: two players)
-    // Determine who goes first
-    // Win Scenario While Loop (check player's HP, if one player is at zero, function stops, and a winner is declared)
-      // Cause the first player to roll (invoke their roll method)
-      // Take the damage calculation and apply to the other player
-      // Switch turns: invoke the second player's roll method
-      // Take the damage calculation and apply to the other player
-  
-  // Magic Armor Class
-
-  // Magic Wand Class

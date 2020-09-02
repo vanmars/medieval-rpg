@@ -17,6 +17,8 @@ describe('battleSystem', () => {
     const battleSystem = new BattleSystem(new Player("Warrior"), new Player("Mage"));
     battleSystem.determineTurn();
     let result = battleSystem.battle();
+    console.log("Player 1 HP: ", battleSystem.player1.type.healthPoints);
+    console.log("Player 2 HP: ", battleSystem.player2.type.healthPoints);
     expect(result).toEqual(expect.any(String));
   });
 });

@@ -17,22 +17,47 @@ export default class BattleSystem {
     determineTurn(){
         this.currentTurn = Math.ceil(Math.random()*2);
     };
-    battle() { 
-      while (this.player1.type.healthPoints > 0 && this.player2.type.healthPoints > 0 ){
-        if (this.currentTurn === 1){
-              let roll = this.player1.type.roll();
-              this.player2.type.applyDamage(roll);
-              this.currentTurn = 2;
-        } else {
-              let roll = this.player2.type.roll();
-              this.player1.type.applyDamage(roll);
-              this.currentTurn = 1;
-        };
-      };
-      if (this.player1.type.healthPoints <= 0){
-        return "Player 2 Wins!"
+    takeTurn(){
+      if (this.currentTurn === 1){
+        let roll = this.player1.type.roll();
+        this.player2.type.applyDamage(roll);
+        this.currentTurn = 2;
       } else {
-        return "Player 1 Wins!"
+        let roll = this.player2.type.roll();
+        this.player1.type.applyDamage(roll);
+        this.currentTurn = 1;
       };
     };
+
+    checkforWin(){
+      if (this.player1.type.healthPoints <= 0){
+        console.log("Player 2 Wins!");
+        this.winner = "Player 2"
+        return true
+      } else {
+        console.log("Player 1 Wins!");
+        this.winner = "Player 1"
+        return true
+      };
+    };
+    // battle() { 
+    //   while (this.player1.type.healthPoints > 0 && this.player2.type.healthPoints > 0 ){
+    //     if (this.currentTurn === 1){
+    //           let roll = this.player1.type.roll();
+    //           this.player2.type.applyDamage(roll);
+    //           this.currentTurn = 2;
+    //     } else {
+    //           let roll = this.player2.type.roll();
+    //           this.player1.type.applyDamage(roll);
+    //           this.currentTurn = 1;
+    //     };
+    //   };
+    //   if (this.player1.type.healthPoints <= 0){
+    //     console.log("Player 2 Wins!");
+    //     return "Player 2 Wins!"
+    //   } else {
+    //     console.log("Player 1 Wins!");
+    //     return "Player 1 Wins!"
+    //   };
+    // };
 };
