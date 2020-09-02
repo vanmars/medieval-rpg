@@ -13,7 +13,13 @@ describe('warrior', () => {
     expect(warrior.roll()).toBeLessThanOrEqual(-2);
     expect(warrior.roll()).toBeGreaterThanOrEqual(-12);
   });
+  test('to show healthPoints being depleted when calling the roll()', () => {
+    const warrior = new Warrior();
+    warrior.applyDamage(-4);
+    expect(warrior.healthPoints).toEqual(96);
+  });
 });
+
 
 // class Warrior {
 //   constructor(){

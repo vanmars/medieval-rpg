@@ -16,7 +16,7 @@ export default class Warrior {
     return -2*(Math.ceil(Math.random()*6))
   }
 
-//   applyDamage(number) {
-//     this.healthPoints -= number;
-//   }
+  applyDamage(number) {
+    this.healthPoints += number;
+  }
 }
