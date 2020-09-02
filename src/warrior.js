@@ -13,7 +13,7 @@ export default class Warrior {
     this.intelligence = 20;
   }
   roll() {
-    return -2(Math.ceil(Math.random()*6))
+    return -2*(Math.ceil(Math.random()*6))
   }
 
 //   applyDamage(number) {

@@ -8,6 +8,11 @@ describe('warrior', () => {
     expect(warrior.defense).toEqual(80);
     expect(warrior.intelligence).toEqual(20);
   });
+  test('returns a damage roll with a value less than/equal to -2 and greater than/equal to -12', () => {
+    const warrior = new Warrior();
+    expect(warrior.roll()).toBeLessThanOrEqual(-2);
+    expect(warrior.roll()).toBeGreaterThanOrEqual(-12);
+  });
 });
 
 // class Warrior {
