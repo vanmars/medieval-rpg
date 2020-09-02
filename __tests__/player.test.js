@@ -17,6 +17,14 @@ describe('Player', () => {
     expect(player.type.strength).toEqual(110);
     expect(player.type.defense).toEqual(90);
     expect(player.type.intelligence).toEqual(20);
+
+    const player1 = new Player("Mage");
+    player1.levelUp();
+    expect(player1.playerLevel).toEqual(2);
+    expect(player1.type.healthPoints).toEqual(110);
+    expect(player1.type.strength).toEqual(10);
+    expect(player1.type.defense).toEqual(60);
+    expect(player1.type.intelligence).toEqual(110);
   });
 });
 
