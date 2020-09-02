@@ -13,4 +13,10 @@ describe('battleSystem', () => {
     expect(battleSystem.currentTurn).toBeLessThanOrEqual(2);
     expect(battleSystem.currentTurn).toBeGreaterThanOrEqual(1);
   });
+  test('determine whether battle() method returns a win scenario', () => {
+    const battleSystem = new BattleSystem(new Player("Warrior"), new Player("Mage"));
+    battleSystem.determineTurn();
+    let result = battleSystem.battle();
+    expect(result).toEqual(expect.any(String));
+  });
 });
