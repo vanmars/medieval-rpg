@@ -7,6 +7,7 @@
 
       export default class Mage {
         constructor(){
+          this.name = "Mage";
           this.strength = 10;
           this.healthPoints = 100;
           this.defense = 50;

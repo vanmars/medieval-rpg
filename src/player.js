@@ -12,9 +12,19 @@ export default class Player {
   constructor(typeInput) {
     if (typeInput === "Warrior"){
       this.type = new Warrior;
-    } else {
+    } else if(typeInput === "Mage") {
       this.type = new Mage;
     };
     this.playerLevel = 1;
+  };
+  levelUp () {
+    this.playerLevel += 1;
+    this.type.healthPoints += 10;
+    this.type.defense += 10;
+    if(this.type.name === "Warrior") {
+      this.type.strength += 10;
+    } else if(this.type.name === "Mage") {
+      this.type.intelligence += 10;
+    }
   };
 };

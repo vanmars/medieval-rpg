@@ -9,13 +9,26 @@ describe('Player', () => {
     const player1 = new Player("Mage");
     expect(player1.type).toEqual(new Mage);
   });
+  test('levelUp method should update player properties', () =>{
+    const player = new Player("Warrior");
+    player.levelUp();
+    expect(player.playerLevel).toEqual(2);
+    expect(player.type.healthPoints).toEqual(110);
+    expect(player.type.strength).toEqual(110);
+    expect(player.type.defense).toEqual(90);
+    expect(player.type.intelligence).toEqual(20);
+  });
 });
 
 
 
-// export default class Player {
-//   constructor() {
-//     this.type = new Mage;
-//     this.playerLevel = 1
-//   };
-// }
+// levelUp () {
+//   this.playerLevel += 1;
+//   this.type.heathPoints += 10;
+//   this.type.defense += 10;
+//   if(typeInput === "Warrior") {
+//     this.type.strength =+ 10;
+//   } else if(typeInput === "Mage") {
+//     this.type.intelligence =+ 10;
+//   }
+// };

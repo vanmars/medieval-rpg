@@ -7,6 +7,7 @@
 
 export default class Warrior {
   constructor(){
+    this.name = "Warrior";
     this.strength = 100;
     this.healthPoints = 100;
     this.defense = 80;
