@@ -7,5 +7,9 @@ import Mage from './mage.js';
 import Player from './player.js';
 import BattleSystem from './battleSystem.js'
 
-
-
+$(document).ready(function(){
+  $("medieval-form").submit(function(event){
+    event.preventDefault();
+    
+  })
+})

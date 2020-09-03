@@ -5,9 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Medieval Role Playing Game</title>
 </head>
+<!-- <img src="assets/images/knight.jpeg" alt="knight"> -->
 <body>
-  <img src="assets/images/knight.jpeg" alt="knight">
-  <!-- Form -->
-  <!-- Return Div -->
+  <!-- Header -->
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>
+        Medieval RPG
+        <small class="text-muted">Let's play!</small>
+      </h1>
+    </div>
+    <!-- Form -->
+    <div class="card shadow p-4">
+      <h2 class="text-center">Character Details</h2>
+      <form id="medieval-form">
+        <p class="lead bolder">PLAYER 1</p>
+        <div class="form-group">
+          <label for="player1Name">Enter Name:</label>
+          <input type="text" id="player1Name" placeholder="Player 1 Name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="charSelect">Choose Your Class:</label>
+          <select name="charSelect" id="charSelect" class="form-control">
+            <option value="warrior">Warrior</option>
+            <option value="mage">Mage</option>
+          </select>
+          <hr>
+          <p class="lead bolder">PLAYER 2</p>
+          <div class="form-group">
+            <label for="player2Name">Enter Name:</label>
+            <input type="text" id="player2Name" placeholder="Player 2 Name" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="player2Class">Choose Your Class:</label>
+            <select name="player2Class" id="player2Class" class="form-control">
+              <option value="warrior">Warrior</option>
+              <option value="mage">Mage</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-danger">Play!</button>
+      </form>
+    </div>
+    <!-- Hidden Battle Div -->
+    <div class="card shadow p-4" id="battleDiv">
+      <h6 class="text-center display-3">Battle!</h6>
+      <h2>It's Player <span id="playerTurn"></span>'s Turn!</h2>
+      <br>
+      <button class="btn btn-danger" style="width: 25%">Attack!</button>
+      <!-- Hidden Win Result Div -->
+      <div class="card" id="winResultDiv">
+        <h2 class="text-center">Player <span id="winner"></span> WINS!!!</h2>
+      </div>
+      <br>
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Player 1 Name:</h4>
+            <p class="card-text">Type:</p>
+            <p class="card-text">Health Points:</p>
+            <p class="card-text">Defense:</p>
+            <p class="card-text">Strength:</p>
+            <p class="card-text">Intelligence:</p>
+          </div>
+          <img src="assets/images/knight.jpeg" alt="" class="card-img-bottom">
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Player 2 Name:</h4>
+            <p class="card-text">Type:</p>
+            <p class="card-text">Health Points:</p>
+            <p class="card-text">Defense:</p>
+            <p class="card-text">Strength:</p>
+            <p class="card-text">Intelligence:</p>
+          </div>
+          <img src="assets/images/knight.jpeg" alt="" class="card-img-bottom">
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
