@@ -25,10 +25,10 @@
           <input type="text" id="player1Name" placeholder="Player 1 Name" class="form-control">
         </div>
         <div class="form-group">
-          <label for="charSelect">Choose Your Class:</label>
-          <select name="charSelect" id="charSelect" class="form-control">
-            <option value="warrior">Warrior</option>
-            <option value="mage">Mage</option>
+          <label for="player1Class">Choose Your Class:</label>
+          <select name="player1Class" id="player1Class" class="form-control">
+            <option value="Warrior">Warrior</option>
+            <option value="Mage">Mage</option>
           </select>
           <hr>
           <p class="lead bolder">PLAYER 2</p>
@@ -39,8 +39,8 @@
           <div class="form-group">
             <label for="player2Class">Choose Your Class:</label>
             <select name="player2Class" id="player2Class" class="form-control">
-              <option value="warrior">Warrior</option>
-              <option value="mage">Mage</option>
+              <option value="Warrior">Warrior</option>
+              <option value="Mage">Mage</option>
             </select>
           </div>
         </div>
@@ -53,6 +53,7 @@
       <h2>It's Player <span id="playerTurn"></span>'s Turn!</h2>
       <br>
       <button class="btn btn-danger" style="width: 25%">Attack!</button>
+      <br>
       <!-- Hidden Win Result Div -->
       <div class="card" id="winResultDiv">
         <h2 class="text-center">Player <span id="winner"></span> WINS!!!</h2>
@@ -61,23 +62,23 @@
       <div class="card-deck">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Player 1 Name:</h4>
-            <p class="card-text">Type:</p>
-            <p class="card-text">Health Points:</p>
-            <p class="card-text">Defense:</p>
-            <p class="card-text">Strength:</p>
-            <p class="card-text">Intelligence:</p>
+            <h4 class="card-title">Player 1 Name: <span id="card1Name"></span></h4>
+            <p class="card-text">Type: <span id="card1Type"></span></p>
+            <p class="card-text">Health Points: <span id="card1HP"></span></p>
+            <p class="card-text">Defense: <span id="card1Defense"></span></p>
+            <p class="card-text">Strength: <span id="card1Strength"></span></p>
+            <p class="card-text">Intelligence: <span id="card1Intelligence"></span></p>
           </div>
           <img src="assets/images/knight.jpeg" alt="" class="card-img-bottom">
         </div>
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Player 2 Name:</h4>
-            <p class="card-text">Type:</p>
-            <p class="card-text">Health Points:</p>
-            <p class="card-text">Defense:</p>
-            <p class="card-text">Strength:</p>
-            <p class="card-text">Intelligence:</p>
+            <h4 class="card-title">Player 2 Name: <span id="card2Name"></span></h4>
+            <p class="card-text">Type: <span id="card2Type"></span></p>
+            <p class="card-text">Health Points: <span id="card2HP"></span></p>
+            <p class="card-text">Defense: <span id="card2Defense"></span></p>
+            <p class="card-text">Strength: <span id="card2Strength"></span></p>
+            <p class="card-text">Intelligence: <span id="card2Intelligence"></span></p>
           </div>
           <img src="assets/images/knight.jpeg" alt="" class="card-img-bottom">
         </div>
