@@ -67,6 +67,7 @@ $(document).ready(function(){
 
       let winScenario = newGame.checkforWin();
       if (winScenario){
+        $(".turnDiv").hide();
         $("#winResultDiv").show();
         $("#winner").text(newGame.winner)
       };
