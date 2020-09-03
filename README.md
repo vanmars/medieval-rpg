@@ -48,12 +48,11 @@ _This is a medieval role playing game that allows users to pick an avatar and ba
 
 ## Setup/Installation Requirements
 
-To View Project:
-* Open a web browser of your choice and navigate to the following page: https://vanmars.github.io/medieval-rpg/.
-
 To Extend This Project:
 * Clone this project using the 'git clone' command in terminal.
-* Open the cloned repo in a text editor of your choice.
+* Open the cloned repo in a text editor of your choice
+* Run 'npm install' in terminal to load all dependencies
+* Run 'npm run start' in terminal to initialize live server to see changes made to project
 
 ## Known Bugs
 
