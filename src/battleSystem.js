@@ -17,6 +17,7 @@ export default class BattleSystem {
     determineTurn(){
         this.currentTurn = Math.ceil(Math.random()*2);
     };
+
     takeTurn(){
       if (this.currentTurn === 1){
         let roll = this.player1.type.roll();
@@ -32,12 +33,14 @@ export default class BattleSystem {
     checkforWin(){
       if (this.player1.type.healthPoints <= 0){
         console.log("Player 2 Wins!");
-        this.winner = "Player 2"
+        this.winner = "Player 2";
+        return true
+      } else if (this.player2.type.healthPoints <= 0){
+        console.log("Player 1 Wins!");
+        this.winner = "Player 1";
         return true
       } else {
-        console.log("Player 1 Wins!");
-        this.winner = "Player 1"
-        return true
+        return false
       };
     };
     // battle() { 
