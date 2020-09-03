@@ -39,25 +39,37 @@ $(document).ready(function(){
     $("#medieval-form").hide();
     $("#battleDiv").show();
     $("#playerTurn").text(turn);
-
     $("#card1Name").text(player1Name);
     $("#card2Name").text(player2Name);
-
     $("#card1Type").text(player1Type);
     $("#card2Type").text(player2Type);
 
     $("#card1HP").text(player1.type.healthPoints);
     $("#card2HP").text(player2.type.healthPoints);
-
     $("#card1Defense").text(player1.type.defense);
     $("#card2Defense").text(player2.type.defense);
-
     $("#card1Strength").text(player1.type.strength);
     $("#card2Strength").text(player2.type.strength);
-
     $("#card1Intelligence").text(player1.type.intelligence);
     $("#card2Intelligence").text(player2.type.intelligence);
-  });
 
-  // Create Event Listeners for Attack Button
-})
+     // Create Event Listener for Attack Button
+    $("#attackBtn").click(function(){
+      newGame.takeTurn()
+      $("#card1HP").text(player1.type.healthPoints);
+      $("#card2HP").text(player2.type.healthPoints);
+      $("#card1Defense").text(player1.type.defense);
+      $("#card2Defense").text(player2.type.defense);
+      $("#card1Strength").text(player1.type.strength);
+      $("#card2Strength").text(player2.type.strength);
+      $("#card1Intelligence").text(player1.type.intelligence);
+      $("#card2Intelligence").text(player2.type.intelligence);
+
+      let winScenario = newGame.checkforWin();
+      if (winScenario){
+        $("#winResultDiv").show();
+        $("#winner").text(newGame.winner)
+      };
+    });
+  });   
+});
